@@ -1,0 +1,55 @@
+Exam.Application:
+- Interfaces
+	- Renamed to Interface and fixed namespaces
+- IBookRepository:
+	- GetAutherWithBook -> GetAuthorWithBook
+- QuizService:
+	- Injected services should be readonly
+	- CheckAnswer logic is reversed
+	- GetNewBookId while is fixed
+- StatisticsService:
+	- Injected services should be readonly
+
+Exam.Domain:
+- Author:
+	- should be public
+
+Exam.Infrastructure:
+- BookRepository
+	- Fixed naming of private readonly
+	- GetAutherWithBook -> GetAuthorWithBook
+- QuestionFactory:
+	- Injected services should be readonly
+	- IBookRepository.GetAutherWithBook -> IBookRepository.GetAuthorWithBook
+- StatisticsRepository:
+	- should be internal
+	- Fixed naming of private readonly
+
+Exam.Presentation:
+- StatisticsForm:
+	- Injected services should be readonly
+	- Using object initialization for bindingSource
+	- statistic_Load -> Statistic_Load
+- DataManagamentForm:
+	- Injected services should be readonly
+	- DataManagamentForm -> DataManagementForm
+	- Fixed namings, all of them
+	- Using Resource file for texts
+- InputBox:
+	- Fixed namings
+	- Using var instead of DialogResult
+	- Using Resource file for button texts
+- GameForm:
+	- Injected services should be readonly
+	- Fixed namings, all of them
+	- Using Resource file for texts
+	- Removing radio button focus when getting next question
+- MainForm:
+	- Injected services should be readonly
+	- Fixed namings, all of them
+	- Using Resource file for texts
+	- Fixing Menu
+
+Added:
+- Exam.Application.Tests
+- Exam.Presentation.PresentationResource
